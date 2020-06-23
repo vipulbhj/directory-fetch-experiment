@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Intersection Observer - A Free Collision Detection Engine for the Web">
+  <meta name="keywords" content="Javascript, Symbols, Alogrithms">
+  <meta name="author" content="Vipul Bhardwaj">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intersection Observer - A Free Collision Detection Engine for the Web</title>
+  <link rel="stylesheet" href="./blog.css">
+</head>
+<body>
+  <section class="blog">
+    <p class="blog-title">Intersection Observer - A Free Collision Detection Engine for the Web</p>
+    <article class="blog-content">
+    </article>
+  </section>
+</body>
+</html>

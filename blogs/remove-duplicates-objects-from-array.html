@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Removing Duplicates Objects from Array">
+  <meta name="keywords" content="Javascript, Symbols, Alogrithms">
+  <meta name="author" content="Vipul Bhardwaj">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Removing Duplicates Objects from Array</title>
+  <link rel="stylesheet" href="./blog.css">
+</head>
+<body>
+  <section class="blog">
+    <p class="blog-title">Removing Duplicates Objects from Array</p>
+    <article class="blog-content">
+      <p>I am firm believer of the fact that programing languages are tools and to be good at solving problems, knowing you tool will make your life so much easier. Which holds true in the case of this problem as well.</p>
+
+      <p>So, today I came across this article https://bitsofco.de/removing-duplicate-objects-from-an-array-is-hard/ which talks about how it is difficult (as of computationally) to remove duplicate elements from an array in case of non-primitive types such as objects.</p>
+
+      <p>Now the solution proposed by the author is not a great one, I agree but he shows of a great trick I just learned for primitive data and I am so gone use this from now. But the point is that this indeed is a problem to thing about. You can get this idea if you google for this problem, you will find so much content with all kinds of approaches and all complexity solutions. So, its a well know problem people encounter on day to day basic.</p>
+
+      <p>Now how can we solve this problem in a way which takes advantage of your tool.</p>
+      
+      <script src="https://gist.github.com/vipulbhj/479c25da5421e398e9dbaf73090936e6.js"></script>
+
+      <p>This is my implementation to solve the same problem using JavaScript Symbols(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Basically Symbols are a way to generate values which are internally represented as different values upon each function call. But Symbol.for(‘cat’) allows you to make a global symbol and upon each construction will give you the same value.</p>
+
+      <p>Now, using that approach, we first convert the array into an array of symbols and then we can use the same idea of having primitives and removing duplicates and that’s it basically.</p>
+
+      <p>Afterwards I did some tests just for fun and turns out this solution is pretty scale able too. Here are some results:-</p>
+
+      <ul>
+        <li>For 100 elements or so, it takes about 5.5ms where as the approach used in the original article takes 2.2ms.</li>
+        <li>For 500 elements or so, it takes 5.7ms whereas the other algorithm takes 11.7ms.</li>
+        <li>For 1500 elements or so, it takes 3.886ms whereas the other algorithm takes 32.82ms.</li>
+        <li>For 8000 elements or so, it takes 5.57ms whereas the other algorithm takes 60.71ms.</li>
+      </ul>
+
+      <p>And after that I was obviously bored, so If someone finds this useful and does some testing on a bigger and may be more real world data, I would love to know stats.</p>
+
+      <p>If you want to talk more about the implementation or anything else, you can find me on Instagram or Twitter as @vipulbhj.</p>
+
+      <p>Thank you so much for reading, don’t forget to share If you find the information useful.</p>
+    </article>
+  </section>
+</body>
+</html>
